@@ -5,7 +5,6 @@ import csv
 from cytolk import tolk
 from typing import Optional, Tuple
 
-# Import our custom grid components from the other file
 from grid_components import SQLiteGridTable, DataTypeAwareGrid
 
 # --- Constants ---
@@ -104,9 +103,6 @@ class SQLiteEditor(wx.Frame):
         self.save_item.Enable(is_data_visible); self.toggle_edit_item.Enable(is_data_visible); self.add_row_item.Enable(is_data_visible and self.edit_mode)
         self.delete_row_item.Enable(is_data_visible and self.edit_mode); self.view_schema_item.Enable(is_data_visible); self.export_csv_item.Enable(is_data_visible)
         self.main_sizer.Layout()
-        if not has_db:
-#            tolk.speak(WELCOME_MESSAGE)
-            self._update_statusbar("Ready", "", "")
 
     def on_open(self, event: wx.CommandEvent):
         if self._check_unsaved_changes() == wx.ID_CANCEL: return
