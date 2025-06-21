@@ -29,7 +29,7 @@ class SQLiteEditor(wx.Frame):
         self._init_ui()
         self._update_ui_state(has_db=False)
         self.Centre()
-
+        self.welcome_message.SetFocus()
     def _init_ui(self):
         self.SetTitle(APP_TITLE)
         self.SetSize((900, 700))
@@ -105,7 +105,7 @@ class SQLiteEditor(wx.Frame):
         self.delete_row_item.Enable(is_data_visible and self.edit_mode); self.view_schema_item.Enable(is_data_visible); self.export_csv_item.Enable(is_data_visible)
         self.main_sizer.Layout()
         if not has_db:
-            tolk.speak(WELCOME_MESSAGE)
+#            tolk.speak(WELCOME_MESSAGE)
             self._update_statusbar("Ready", "", "")
 
     def on_open(self, event: wx.CommandEvent):
