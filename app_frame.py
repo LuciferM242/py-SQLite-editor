@@ -9,7 +9,7 @@ from typing import Optional, Tuple
 from grid_components import SQLiteGridTable, DataTypeAwareGrid
 
 # --- Constants ---
-APP_TITLE = 'SQLite Editor (Grid View)'
+APP_TITLE = 'SQLite Editor'
 APP_VENDOR = 'SQLiteEditor'
 WELCOME_MESSAGE = (
     "Welcome to SQLite Editor!\n\n"

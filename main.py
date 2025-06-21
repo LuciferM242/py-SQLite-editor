@@ -7,6 +7,9 @@ def main():
     app = wx.App(False)
     try:
         tolk.load()
+        WELCOME_MESSAGE = ("Welcome to SQLite Editor!\n\n""Please select a file by choosing 'Open' from the 'File' menu (Ctrl+O)."
+)
+
         frame = SQLiteEditor(None)
         frame.Show(True)
         app.MainLoop()
